@@ -10,12 +10,14 @@
   <ion-row>
     <ion-button (click)="goToMaps()">Paramètres de navigation</ion-button>
     <ion-button (click)="goToAPI()">Calls API</ion-button>
-    <ion-button (click)="alertValue()">Display value</ion-button>
     <ion-item>
       <ion-label>
         Salut
       </ion-label>
+
       <ion-input [(ngModel)]="value"></ion-input>
+      <ion-button (click)="displayValue()">Récupérer la valeur</ion-button>
+
     </ion-item>
   </ion-row>
 </ion-content>

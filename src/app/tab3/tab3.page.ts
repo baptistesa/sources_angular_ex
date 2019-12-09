@@ -16,14 +16,14 @@ export class Tab3Page {
     this.activated_route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.received_object = this.router.getCurrentNavigation().extras.state
-        alert(this.received_object);
+        alert(JSON.stringify(this.received_object));
       }
     })
   }
 
 
   // Display an alert with the current value
-  alertValue() {
+  displayValue() {
     alert(this.value);
   }
 
@@ -34,7 +34,7 @@ export class Tab3Page {
         user: "this.user"
       }
     };
-    this.router.navigate(["/maps"], navigationExtras);
+    this.router.navigate(["tabs/tab3/test"], navigationExtras);
   }
 
   // Go to api
